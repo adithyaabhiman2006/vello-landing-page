@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vello — Personal Finance Management Application | SDGP Evidence</title>
+    <meta name="description" content="Vello is a Flutter-based personal finance management app built by Team CS-113 at IIT/UoW. SDGP CW1 Referral Evidence Hub.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <span>Vello</span>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#problem">Problem</a>
+                <a href="#solution">Solution</a>
+                <a href="#gallery">App Gallery</a>
+                <a href="#features">Features</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#evidence">Evidence</a>
+                <a href="#academic">Academic</a>
+            </nav>
+            <div class="mobile-menu-toggle" id="menuToggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge-tag">SDGP CW1 · CS-113 · IIT / UoW</div>
+                <h1 class="hero-title"><span>Vello</span></h1>
+                <h2 class="hero-subtitle">Personal Finance Management Application</h2>
+                <p class="hero-text">
+                    A cross-platform Flutter app that helps Sri Lankan users track expenses, scan bills with OCR, plan event budgets, and get weekly AI-powered financial guidance — in English, Sinhala, and Tamil.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://github.com/KavinduAbeysingheDev/Vello-Personal-Financial-Management-Application.git" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        GitHub Repository
+                    </a>
+                    <a href="https://youtu.be/uMGL6TvathU" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Watch Demo
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="images/screen2.jpg" alt="Vello App Dashboard" class="phone-mockup-hero">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROBLEM ===== -->
+    <section class="section problem-section" id="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Problem</h2>
+                <p class="section-subtitle">Why Sri Lankan users need a finance app designed for their context</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="content-box">
+                <div class="problem-grid">
+                    <div class="problem-text">
+                        <p>Many users struggle to manage personal finances because they forget small daily expenses, overspend without noticing, and find it difficult to plan budgets for bills, events, and festivals.</p>
+                        <p>Existing finance apps do not fully match the Sri Lankan context — especially for language support, cash-based transactions, SMS-based payments, and culturally relevant financial guidance.</p>
+                    </div>
+                    <div class="problem-icon-grid">
+                        <div class="icon-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span>Overspending</span></div>
+                        <div class="icon-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Forgotten Expenses</span></div>
+                        <div class="icon-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Language Barriers</span></div>
+                        <div class="icon-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>No SMS/Bill Detection</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOLUTION ===== -->
+    <section class="section solution-section alt-bg" id="solution">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proposed Solution</h2>
+                <p class="section-subtitle">Vello bridges the gap with a practical, accessible, and intelligent finance tool</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="content-box">
+                <p class="solution-text">Vello provides a simple personal finance management system with income and expense tracking, category-based budgeting, colour-coded visual dashboards, OCR bill scanning, Gmail/SMS bill detection, weekly AI-based budget recommendations, event & festival budget planning, and savings goal tracking.</p>
+                <p class="solution-text">The app supports <strong>English, Sinhala, and Tamil</strong> to improve accessibility for all Sri Lankan users — students, working professionals, and families alike.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== APP GALLERY (HORIZONTAL CAROUSEL) ===== -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">App Gallery</h2>
+                <p class="section-subtitle">Scroll to explore all screens of the Vello application</p>
+                <div class="section-line"></div>
+            </div>
+        </div>
+
+        <div class="carousel-track-wrapper" id="carousel">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen17.jpg" alt="Splash Screen"></div>
+                    <span class="phone-label">Splash Screen</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen14.jpg" alt="Login"></div>
+                    <span class="phone-label">Login</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen13.jpg" alt="Sign Up"></div>
+                    <span class="phone-label">Sign Up</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen2.jpg" alt="Dashboard"></div>
+                    <span class="phone-label">Dashboard</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen9.jpg" alt="Statistics"></div>
+                    <span class="phone-label">Statistics</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen5.jpg" alt="All Transactions"></div>
+                    <span class="phone-label">All Transactions</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen7.jpg" alt="Add Transaction"></div>
+                    <span class="phone-label">Add Transaction</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen3.jpg" alt="Bill Scanner"></div>
+                    <span class="phone-label">Bill Scanner</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen16.jpg" alt="Event Planner"></div>
+                    <span class="phone-label">Event Planner</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen15.jpg" alt="Savings Goals"></div>
+                    <span class="phone-label">Savings Goals</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen8.jpg" alt="AI Assistant"></div>
+                    <span class="phone-label">AI Assistant</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen12.jpg" alt="AI Spending Analysis"></div>
+                    <span class="phone-label">AI Analysis</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen4.jpg" alt="Profile"></div>
+                    <span class="phone-label">Profile</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen6.jpg" alt="Settings (English)"></div>
+                    <span class="phone-label">Settings</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen10.jpg" alt="Settings (Dark Mode)"></div>
+                    <span class="phone-label">Dark Mode</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen1.jpg" alt="Sinhala Language"></div>
+                    <span class="phone-label">Sinhala UI</span>
+                </div>
+                <div class="phone-card">
+                    <div class="phone-frame"><img src="images/screen11.jpg" alt="Tamil Language"></div>
+                    <span class="phone-label">Tamil UI</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-scroll-hint">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Drag or scroll horizontally to see all screens
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section features-section alt-bg" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Core Features</h2>
+                <p class="section-subtitle">Everything built into Vello to manage your finances</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3 class="feature-title">Income & Expense Tracking</h3></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div><h3 class="feature-title">Colour-Coded Dashboard</h3></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><h3 class="feature-title">Category-Based Budgeting</h3></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><rect x="7" y="7" width="10" height="10" rx="1"/></svg></div><h3 class="feature-title">OCR Bill Scanning</h3></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><h3 class="feature-title">Gmail / SMS Bill Detection</h3></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><h3 class="feature-title">Weekly AI Budget Planner</h3></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><h3 class="feature-title">Event & Festival Budgeting</h3></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="feature-title">Savings Goals Tracker</h3></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><h3 class="feature-title">Spending Statistics</h3></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div><h3 class="feature-title">Dark & Light Mode</h3></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3 class="feature-title">English, Sinhala & Tamil UI</h3></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><h3 class="feature-title">Offline SQLite Storage</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ARCHITECTURE ===== -->
+    <section class="section architecture-section" id="architecture">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">System Architecture</h2>
+                <p class="section-subtitle">A clean, layered design built for scalability and security</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="arch-grid">
+                <div class="arch-layer">
+                    <h3>UI Layer</h3>
+                    <ul>
+                        <li>Flutter Cross-Platform App</li>
+                        <li>Dashboard & Charts</li>
+                        <li>Bill Scanner & AI Chat</li>
+                        <li>Tri-Language Interface</li>
+                    </ul>
+                </div>
+                <div class="arch-layer">
+                    <h3>Functionality Layer</h3>
+                    <ul>
+                        <li>OCR Handler (Google ML Kit)</li>
+                        <li>Gmail / SMS Import Service</li>
+                        <li>Rule-Based AI Agent</li>
+                        <li>Notification & Sync Manager</li>
+                    </ul>
+                </div>
+                <div class="arch-layer">
+                    <h3>Data Layer</h3>
+                    <ul>
+                        <li>Firebase Firestore (Cloud DB)</li>
+                        <li>SQFLite Encrypted (Local DB)</li>
+                        <li>Firebase Cloud Storage</li>
+                        <li>Flutter Secure Storage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EVIDENCE ===== -->
+    <section class="section evidence-section alt-bg" id="evidence">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Evidence</h2>
+                <p class="section-subtitle">All resources and deliverables for SDGP CW1 referral submission</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="evidence-grid">
+                <a href="#" class="evidence-link-card">
+                    <div class="evidence-icon report"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 3v5h5"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                    <div class="evidence-content"><h3>SRS & Architecture Report</h3><p>Individual academic report (PDF) — Chapters 4, 5 & 6</p></div>
+                    <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="https://github.com/KavinduAbeysingheDev/Vello-Personal-Financial-Management-Application.git" target="_blank" rel="noopener" class="evidence-link-card">
+                    <div class="evidence-icon github"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+                    <div class="evidence-content"><h3>GitHub Repository</h3><p>Full Flutter source code, commits & documentation</p></div>
+                    <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="https://youtu.be/uMGL6TvathU" target="_blank" rel="noopener" class="evidence-link-card">
+                    <div class="evidence-icon youtube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.28 1 12 1 12s0 3.72.46 5.58a2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.72 23 12 23 12s0-3.72-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></div>
+                    <div class="evidence-content"><h3>Demo Video</h3><p>Full application feature walkthrough on YouTube</p></div>
+                    <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="https://youtu.be/uMaVWYk-hVw" target="_blank" rel="noopener" class="evidence-link-card">
+                    <div class="evidence-icon youtube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.28 1 12 1 12s0 3.72.46 5.58a2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.72 23 12 23 12s0-3.72-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></div>
+                    <div class="evidence-content"><h3>Marketing Video</h3><p>Project presentation & promotional concept video</p></div>
+                    <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="https://www.instagram.com/vellofinanceapp?utm_source=qr" target="_blank" rel="noopener" class="evidence-link-card">
+                    <div class="evidence-icon instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+                    <div class="evidence-content"><h3>Instagram Page</h3><p>@vellofinanceapp — social media presence</p></div>
+                    <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="https://www.facebook.com/share/1Atbq62mMS/?mibextid=wwXIfr" target="_blank" rel="noopener" class="evidence-link-card">
+                    <div class="evidence-icon facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+                    <div class="evidence-content"><h3>Facebook Page</h3><p>Team Vello social media page</p></div>
+                    <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TECH STATUS ===== -->
+    <section class="section tech-status-section" id="status">
+        <div class="container">
+            <div class="grid-2-col">
+                <div class="status-box">
+                    <div class="status-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" width="22" height="22"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <h3>Prototype Status</h3>
+                    </div>
+                    <div class="status-content">
+                        <p><strong>A separate live prototype is not available for this referral submission.</strong> The project is evidenced through the GitHub repository, demo video, marketing video, social media pages, UI designs, system diagrams, and academic reports.</p>
+                    </div>
+                </div>
+                <div class="tech-stack">
+                    <h3>Technology Stack</h3>
+                    <div class="tech-badges">
+                        <span class="badge">Flutter</span>
+                        <span class="badge">Dart</span>
+                        <span class="badge">Firebase Auth</span>
+                        <span class="badge">Firestore</span>
+                        <span class="badge">Google ML Kit</span>
+                        <span class="badge">SQFLite</span>
+                        <span class="badge">FCM</span>
+                        <span class="badge">Figma</span>
+                        <span class="badge">GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ACADEMIC ===== -->
+    <section class="section academic-section alt-bg" id="academic">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Academic Information</h2>
+                <p class="section-subtitle">Submission details for SDGP CW1 Referral</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="academic-card">
+                <div class="academic-row"><div class="academic-label">Student Name</div><div class="academic-value">K.D. Adithya Abhiman</div></div>
+                <div class="academic-row"><div class="academic-label">IIT Student ID</div><div class="academic-value">20231387</div></div>
+                <div class="academic-row"><div class="academic-label">UoW Student ID</div><div class="academic-value">W2153543</div></div>
+                <div class="academic-row"><div class="academic-label">Module</div><div class="academic-value">5COSC021C.Y — Software Development Group Project</div></div>
+                <div class="academic-row"><div class="academic-label">Module Leader</div><div class="academic-value">Mr. Banuka Athuraliya</div></div>
+                <div class="academic-row"><div class="academic-label">Institution</div><div class="academic-value">Informatics Institute of Technology (IIT)</div></div>
+                <div class="academic-row"><div class="academic-label">University</div><div class="academic-value">University of Westminster (UoW)</div></div>
+                <div class="academic-row highlight-row"><div class="academic-label">Project Group</div><div class="academic-value font-semibold">CS-113</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Vello</div>
+            <p class="footer-tagline">Personal Finance Management Application · SDGP CS-113</p>
+            <div class="footer-links">
+                <a href="https://github.com/KavinduAbeysingheDev/Vello-Personal-Financial-Management-Application.git" target="_blank">GitHub</a>
+                <a href="https://youtu.be/uMGL6TvathU" target="_blank">Demo Video</a>
+                <a href="https://www.instagram.com/vellofinanceapp" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/share/1Atbq62mMS/" target="_blank">Facebook</a>
+            </div>
+            <hr class="footer-divider">
+            <p class="footer-copyright">© 2026 Team Vello · Informatics Institute of Technology · Built for academic evidence purposes only</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
